@@ -22,18 +22,18 @@ python run_all_experiments.py --model dppo --experiment vwap --seed 0
 ```
 dPPO-NeurIPS/
 ├── dPPO/                    # Dense reward experiments
-│   ├── arma-garch/         # ARMA-GARCH dataset (10→100 steps)
-│   ├── electricity/        # Electricity dataset (20→200 steps)
-│   ├── oracle/             # Oracle experiments
-│   └── vwap/               # VWAP dataset (75→350 steps)
+│   ├── arma-garch/          # ARMA-GARCH dataset (10→100 steps)
+│   ├── electricity/         # Electricity dataset (20→200 steps)
+│   ├── oracle/              # Oracle experiments
+│   └── vwap/                # VWAP dataset (75→350 steps)
 ├── sPPO/                    # Sparse reward experiments  
 │   ├── arma-garch/
 │   ├── electricity/
 │   ├── oracle/
 │   └── vwap/
 ├── SeqGAN/                  # Original SeqGAN baseline
-│   └── oracle/             # Only oracle experiments
-└── run_all_experiments.py  # Simple experiment runner
+│   └── oracle/              # Only oracle experiments
+└── run_all_experiments.py   # Simple experiment runner
 ```
 
 ## Models
@@ -60,7 +60,7 @@ python run_all_experiments.py --model seqgan --experiment oracle --seed 0
 
 ## Reproduce Paper Results
 
-In the train_parallel.py file change the variable from 'num_seeds': 1 to multiple (e.g. 30 etc.)
+In the `train_parallel.py` file change the variable from `'num_seeds': 1` to multiple (e.g. 30 etc.)
 
 ### Table 1 Results (VWAP, Electricity, ARMA-GARCH)
 ```bash
