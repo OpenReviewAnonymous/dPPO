@@ -15,8 +15,6 @@ pip install -r requirements.txt
 # Run single experiment
 python run_all_experiments.py --model dppo --experiment vwap --seed 0
 
-# Run all paper experiments (takes 12-24 hours)
-python run_all_experiments.py --model all --experiment all --num_seeds 30
 ```
 
 ## Repository Structure
@@ -61,6 +59,8 @@ python run_all_experiments.py --model seqgan --experiment oracle --seed 0
 ```
 
 ## Reproduce Paper Results
+
+In the train_parallel.py file change the variable from 'num_seeds': 1 to multiple (e.g. 30 etc.)
 
 ### Table 1 Results (VWAP, Electricity, ARMA-GARCH)
 ```bash
@@ -111,4 +111,4 @@ Each experiment folder contains:
 - **Recommended**: NVIDIA GPU with 8GB+ VRAM
 - **Minimum**: 4GB GPU memory 
 - **RAM**: 16GB+ system memory
-- **Time**: Full reproduction takes 12-24 hours on modern GPUs
+- **Time**: Full reproduction takes 2-10min on modern GPUs (depending on pretraining, # of updates etc.)
